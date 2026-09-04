@@ -19,8 +19,8 @@ export default function TrainingTheConsultant() {
         <dl className="mt-8 grid gap-x-14 gap-y-6 rounded-xl bg-plum p-6 sm:grid-cols-2 lg:p-8">
           {TTC.benefits.map((benefit) => (
             <div key={benefit.title}>
-              <dt className="font-semibold text-white lg:text-lg">{benefit.title}</dt>
-              <dd className="mt-3 text-base leading-[1.75] text-white lg:text-lg">
+              <dt className="font-semibold text-white">{benefit.title}</dt>
+              <dd className="mt-3 text-base leading-[1.75] text-white">
                 {benefit.body}
               </dd>
             </div>

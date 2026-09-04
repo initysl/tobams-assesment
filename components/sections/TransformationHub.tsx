@@ -14,7 +14,7 @@ export default function TransformationHub() {
           </p>
           <h2
             id="hub-title"
-            className="mt-2 text-2xl font-semibold text-plum italic sm:text-3xl lg:text-[34px]"
+            className="mt-2 text-2xl font-medium text-plum italic sm:text-3xl lg:text-[32px]"
           >
             {HUB.title}
           </h2>
@@ -37,7 +37,7 @@ export default function TransformationHub() {
                 {HUB.topics.map((topic) => (
                   <li
                     key={topic}
-                    className="flex items-center gap-3 rounded-lg bg-white px-4 py-4 text-base text-ink lg:text-lg"
+                    className="flex items-center gap-3 rounded-lg bg-white px-4 py-4 text-base text-ink"
                   >
                     <BoltIcon className="size-5 shrink-0 text-plum" />
                     {topic}

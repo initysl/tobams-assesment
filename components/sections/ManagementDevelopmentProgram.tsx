@@ -7,15 +7,15 @@ export default function ManagementDevelopmentProgram() {
   return (
     <section aria-labelledby="mdp-title" className="bg-canvas py-12 lg:py-16">
       <Container>
-        <div className="flex flex-col gap-8 rounded-3xl bg-plum-dark p-6 sm:p-10 lg:flex-row lg:items-center lg:gap-14 lg:p-10">
-          <div className="w-full lg:w-1/2">
+        <div className="flex flex-col gap-8 rounded-3xl bg-plum-dark p-6 sm:p-10 lg:flex-row lg:items-stretch lg:gap-14 lg:p-10">
+          {/* The design crops this photo tall so it matches the text column's height. */}
+          <div className="relative aspect-3/2 w-full lg:aspect-auto lg:w-1/2">
             <Image
               src={MDP.image.src}
               alt={MDP.image.alt}
-              width={1000}
-              height={667}
+              fill
               sizes="(max-width: 1024px) 100vw, 600px"
-              className="h-full w-full rounded-lg object-cover"
+              className="rounded-lg object-cover"
             />
           </div>
 
