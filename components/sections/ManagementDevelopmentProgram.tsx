@@ -29,7 +29,7 @@ export default function ManagementDevelopmentProgram() {
             {MDP.paragraphs.map((paragraph) => (
               <p
                 key={paragraph}
-                className="mt-5 text-base leading-[1.65] text-white"
+                className="mt-5 text-base leading-[1.75] text-white lg:text-lg"
               >
                 {paragraph}
               </p>
@@ -39,7 +39,7 @@ export default function ManagementDevelopmentProgram() {
               {MDP.outcomes.map((outcome) => (
                 <li
                   key={outcome}
-                  className="flex items-center gap-3 rounded-lg bg-plum-muted px-4 py-3 text-base text-white"
+                  className="flex items-center gap-3 rounded-lg bg-plum-muted px-4 py-3.5 text-base text-white lg:text-lg"
                 >
                   <BoltIcon className="size-5 shrink-0" />
                   {outcome}

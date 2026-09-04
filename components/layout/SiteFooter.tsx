@@ -32,9 +32,9 @@ export default function SiteFooter() {
               <Image
                 src="/images/tobams-group-logo.png"
                 alt="Tobams Group"
-                width={900}
-                height={600}
-                className="h-12 w-auto"
+                width={794}
+                height={197}
+                className="h-10 w-auto"
               />
               <p className="mt-6 max-w-sm text-base leading-[1.6] text-white">
                 {FOOTER_TAGLINE}

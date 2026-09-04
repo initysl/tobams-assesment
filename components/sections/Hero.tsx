@@ -27,7 +27,7 @@ export default function Hero() {
         >
           {HERO.title}
         </h1>
-        <p className="mt-4 max-w-[1080px] text-lg leading-relaxed text-white sm:text-xl">
+        <p className="mt-4 max-w-[1100px] text-base leading-relaxed text-white lg:text-lg">
           {HERO.body}
         </p>
         <Button href={HERO.cta.href} className="mt-8 px-8 py-4 text-lg">

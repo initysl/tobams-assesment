@@ -23,7 +23,7 @@ export default function FeatureSplit({ content }: { content: FeatureSplitContent
           >
             {content.title}
           </h2>
-          <p className="mt-3 text-base leading-[1.65] text-slate-body">
+          <p className="mt-3 text-base leading-[1.75] text-slate-body lg:text-lg">
             {content.body}
           </p>
           <BulletList items={content.bullets} className="mt-6 lg:pl-9" />

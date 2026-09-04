@@ -17,11 +17,11 @@ export default function SiteHeader() {
           <Image
             src='/images/tobams-group-logo.png'
             alt='Tobams Group home'
-            width={900}
-            height={600}
+            width={794}
+            height={197}
             preload
             fetchPriority='high'
-            className='h-11 w-auto lg:h-13'
+            className='h-8 w-auto lg:h-10'
           />
         </Link>
 

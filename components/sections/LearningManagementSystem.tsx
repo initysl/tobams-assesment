@@ -28,8 +28,8 @@ export default function LearningManagementSystem() {
           </h2>
 
           <div className="mt-6 rounded-xl bg-lilac-deep p-6 lg:p-7">
-            <p className="text-base leading-[1.65] text-ink">{LMS.body}</p>
-            <p className="mt-5 font-semibold text-plum">{LMS.coursesLabel}</p>
+            <p className="text-base leading-[1.75] text-ink lg:text-lg">{LMS.body}</p>
+            <p className="mt-5 font-semibold text-plum lg:text-lg">{LMS.coursesLabel}</p>
             <ul className="mt-3 grid gap-x-6 gap-y-2.5 sm:grid-cols-2 lg:grid-cols-3">
               {LMS.courses.map((course) => (
                 <li

@@ -9,11 +9,11 @@ export default function BulletList({
   className?: string;
 }) {
   return (
-    <ul className={`space-y-2.5 ${className}`}>
+    <ul className={`space-y-3 ${className}`}>
       {items.map((item) => (
         <li key={item} className="flex items-start gap-3">
-          <BoltIcon className="mt-0.5 size-5 shrink-0 text-plum" />
-          <span className="text-base text-slate-body">{item}</span>
+          <BoltIcon className="mt-0.5 size-5.5 shrink-0 text-plum" />
+          <span className="text-base text-slate-body lg:text-lg">{item}</span>
         </li>
       ))}
     </ul>

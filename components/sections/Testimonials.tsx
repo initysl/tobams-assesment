@@ -73,7 +73,7 @@ export default function Testimonials() {
                 </p>
               </div>
             </div>
-            <blockquote className='mt-5 text-base leading-[1.65] text-ink'>
+            <blockquote className='mt-5 text-base leading-[1.75] text-ink lg:text-lg'>
               {testimonial.quote}
             </blockquote>
           </li>
