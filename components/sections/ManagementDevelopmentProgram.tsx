@@ -22,7 +22,7 @@ export default function ManagementDevelopmentProgram() {
           <div className="w-full lg:w-1/2">
             <h2
               id="mdp-title"
-              className="text-3xl leading-snug font-semibold text-white sm:text-4xl lg:text-[40px]"
+              className="text-3xl leading-snug font-medium text-white sm:text-4xl lg:text-[40px]"
             >
               {MDP.title}
             </h2>

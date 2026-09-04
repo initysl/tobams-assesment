@@ -19,14 +19,14 @@ export default function FeatureSplit({ content }: { content: FeatureSplitContent
         >
           <h2
             id={headingId}
-            className="text-3xl font-semibold text-ink sm:text-4xl lg:text-[42px]"
+            className="text-3xl font-medium text-ink sm:text-4xl lg:text-[42px]"
           >
             {content.title}
           </h2>
           <p className="mt-3 text-base leading-[1.75] text-slate-body lg:text-lg">
             {content.body}
           </p>
-          <BulletList items={content.bullets} className="mt-6 lg:pl-9" />
+          <BulletList items={content.bullets} className="mt-5 lg:pl-9" />
         </div>
 
         <div

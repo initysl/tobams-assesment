@@ -40,7 +40,7 @@ export default function Testimonials() {
       <Container>
         <h2
           id='testimonials-title'
-          className='text-center text-3xl font-semibold text-ink sm:text-4xl lg:text-[40px]'
+          className='text-center text-3xl font-medium text-ink sm:text-4xl lg:text-[40px]'
         >
           Testimonials
         </h2>

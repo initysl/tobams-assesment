@@ -9,7 +9,7 @@ export default function TrainingTheConsultant() {
       <Container>
         <h2
           id="consultant-title"
-          className="text-3xl font-semibold text-plum sm:text-4xl lg:text-[42px]"
+          className="text-3xl font-medium text-plum sm:text-4xl lg:text-[42px]"
         >
           {TTC.title}
         </h2>
