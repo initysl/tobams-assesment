@@ -4,7 +4,7 @@ import { motion, useReducedMotion, type Variants } from 'framer-motion';
 import type { ReactNode } from 'react';
 
 /**
- * Fades a section up as it scrolls into view, once. Marketing pages only —
+ * Fades a section up as it scrolls into view, once. Marketing pages only -
  * this is the sort of motion that reads as polish on a first visit and as
  * friction on a tool someone opens daily.
  *

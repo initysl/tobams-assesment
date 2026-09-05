@@ -8,7 +8,7 @@ import Reveal from '@/components/ui/Reveal';
 /**
  * On desktop the portrait sits to the left of the whole text column; on mobile
  * the design slots it between the heading and the copy card. The grid keeps one
- * DOM order — heading, image, card — for both.
+ * DOM order - heading, image, card - for both.
  */
 export default function LearningManagementSystem() {
   return (

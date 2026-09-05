@@ -1,12 +1,13 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 
-type Variant = "primary" | "coral" | "inverse";
+type Variant = "primary" | "coral" | "inverse" | "outline";
 
 const VARIANTS: Record<Variant, string> = {
   primary: "bg-plum text-white hover:bg-plum-dark",
   coral: "bg-coral text-white hover:bg-coral/90",
   inverse: "bg-white text-plum hover:bg-lilac",
+  outline: "border border-plum/30 text-plum hover:border-plum hover:bg-lilac",
 };
 
 /**

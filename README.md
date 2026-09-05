@@ -1,4 +1,4 @@
-# Tobams Group — Frontend Intern Assessment
+# Tobams Group - Frontend Intern Assessment
 
 An implementation of the Tobams Group "Training and Development" page for the Frontend Intern
 Assessment, built as a responsive, production-ready Next.js application.
@@ -19,7 +19,7 @@ Assessment, built as a responsive, production-ready Next.js application.
 | Images    | `next/image`                                 |
 | Motion    | Framer Motion (scroll reveals only)          |
 
-No other CSS framework, UI kit, or third-party component library is used — every component in
+No other CSS framework, UI kit, or third-party component library is used - every component in
 `components/` is written from scratch for this project.
 
 ## Setup
@@ -42,7 +42,8 @@ npm run lint     # ESLint
 ```
 app/
   layout.tsx     Root layout: font, metadata, header, closing CTA, footer
-  page.tsx       Composes the page sections — no markup of its own
+  page.tsx       Composes the page sections - no markup of its own
+  not-found.tsx  Custom branded 404
   globals.css    Tailwind import + the @theme design tokens
 components/
   layout/        SiteHeader, NavDropdown, MobileMenu, SiteFooter
@@ -69,9 +70,9 @@ Tailwind tokens in `app/globals.css`, so a heading only needs `font-heading font
 **Scroll animations.** Each section below the fold fades and rises into place once, via the shared
 `components/ui/Reveal.tsx` wrapper (Framer Motion `whileInView` with `once: true`). Only `opacity` and
 a full `transform` string animate, so the work stays on the GPU. The testimonial cards additionally
-stagger at 60ms intervals. Two deliberate exclusions: the hero does not animate — it is above the fold,
+stagger at 60ms intervals. Two deliberate exclusions: the hero does not animate - it is above the fold,
 and delaying the largest text paint to animate something already on screen trades real performance for
-no benefit — and `prefers-reduced-motion` drops the translate everywhere, keeping only a short fade
+no benefit - and `prefers-reduced-motion` drops the translate everywhere, keeping only a short fade
 rather than removing the transition entirely.
 
 **The desktop and mobile frames disagree in three places.** Where they differ, the implementation
@@ -89,7 +90,10 @@ recovered from the mobile frame, where the cards stack.
 
 **Nav dropdown and footer link targets** are placeholder routes (`/about`, `/pricing`, …). The design
 is a single page, so no other routes exist; the links are real anchors so they remain keyboard-
-navigable and screen-reader-correct.
+navigable and screen-reader-correct. Because that makes the 404 reachable from nearly every header
+click, `app/not-found.tsx` replaces Next's stock page with a branded one that says the route isn't
+built yet and offers the way back — its shortcut list is derived from `NAV_LINKS` rather than retyped,
+so it cannot drift out of sync with the nav.
 
 **Interactivity.** The brief describes a static page, but the design contains a hamburger menu,
 nav dropdown carets, and testimonial carousel arrows. Rendering these as inert decoration would leave
@@ -100,7 +104,7 @@ those three plus the `Reveal` animation wrapper; every section is otherwise a se
 
 ## Responsive behaviour
 
-Built mobile-first and verified at the three widths named in the brief — **425px**, **768px** and
+Built mobile-first and verified at the three widths named in the brief - **425px**, **768px** and
 **1280px+**. Only Tailwind's `sm:`/`lg:` responsive prefixes are used; there are no custom media
 queries anywhere in the codebase.
 

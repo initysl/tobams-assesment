@@ -6,11 +6,11 @@ import Reveal from '@/components/ui/Reveal';
 
 /**
  * Drives Corporate Trainings, Personalised Individual Training and Capacity
- * Development — the same block mirrored, so `imageSide` picks the arrangement.
+ * Development - the same block mirrored, so `imageSide` picks the arrangement.
  *
  * The two frames stack differently: on desktop the image sits beside the whole
  * text column, but on mobile it slots between the heading and the body copy. A
- * grid keeps that in one DOM order — heading, image, body — and expresses the
+ * grid keeps that in one DOM order - heading, image, body - and expresses the
  * desktop layout purely through column and row placement.
  */
 export default function FeatureSplit({
@@ -49,7 +49,7 @@ export default function FeatureSplit({
               width={1000}
               height={667}
               sizes='(max-width: 1024px) 100vw, 600px'
-              className='aspect-12/7 w-full rounded-xl object-cover'
+              className='aspect-12/7 w-full rounded-xl rounded-tl-3xl object-cover'
             />
           </div>
 
