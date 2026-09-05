@@ -17,7 +17,7 @@ const bodyFont = Nunito_Sans({
   subsets: ['latin'],
 });
 
-const TITLE = 'Training and Development';
+const TITLE = 'Tobams Group';
 const DESCRIPTION =
   "Tobams Group's training and development programs - corporate training, personalised individual training, capacity development and the TG Academy learning management system - designed to enhance skills, broaden knowledge and propel careers forward.";
 
