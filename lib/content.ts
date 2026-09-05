@@ -332,7 +332,7 @@ export const NOT_FOUND = {
   code: '404',
   eyebrow: 'PAGE NOT FOUND',
   title: 'This page is still in development',
-  body: "The link you followed doesn't lead anywhere yet. Training and Development is the page that's ready - head back there, or try one of the routes below.",
+  body: "The link you followed doesn't lead anywhere yet. Head back to home, or try one of the routes below.",
   primaryCta: { label: 'Go back ', href: '/' },
   secondaryCta: { label: 'Book a Consultation', href: '/book-a-consultation' },
   linksLabel: 'Popular destinations',
