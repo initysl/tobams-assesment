@@ -16,7 +16,11 @@
   --color-canvas: #fafafa;
   --color-hub-accent: #1d7fe0;
 
-  --font-sans: var(--font-brand), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-nunito-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-nunito), ui-sans-serif, system-ui, sans-serif;
+
+  /* Strong ease-out for the scroll reveals. */
+  --ease-out-strong: cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 body {

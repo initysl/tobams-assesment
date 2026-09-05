@@ -1,8 +1,10 @@
 'use client';
 
 import Image from 'next/image';
+import { motion, useReducedMotion } from 'framer-motion';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import Container from '@/components/ui/Container';
+import Reveal from '@/components/ui/Reveal';
 import { ChevronLeftIcon, ChevronRightIcon } from '@/components/ui/icons';
 import { TESTIMONIALS } from '@/lib/content';
 
@@ -10,6 +12,14 @@ export default function Testimonials() {
   const trackRef = useRef<HTMLUListElement>(null);
   const [atStart, setAtStart] = useState(true);
   const [atEnd, setAtEnd] = useState(false);
+  const reduceMotion = useReducedMotion();
+
+  const cardVariants = reduceMotion
+    ? { hidden: { opacity: 0 }, shown: { opacity: 1 } }
+    : {
+        hidden: { opacity: 0, transform: 'translateY(20px)' },
+        shown: { opacity: 1, transform: 'translateY(0px)' },
+      };
 
   const syncArrows = useCallback(() => {
     const track = trackRef.current;
@@ -37,14 +47,16 @@ export default function Testimonials() {
       aria-labelledby='testimonials-title'
       className='bg-canvas pt-14 pb-12 lg:pt-16 lg:pb-16'
     >
-      <Container>
-        <h2
-          id='testimonials-title'
-          className='text-center text-[22px] font-medium text-ink sm:text-3xl lg:text-[40px]'
-        >
-          Testimonials
-        </h2>
-      </Container>
+      <Reveal>
+        <Container>
+          <h2
+            id='testimonials-title'
+            className='text-center font-heading text-[22px] font-semibold text-ink sm:text-3xl lg:text-[40px]'
+          >
+            Testimonials
+          </h2>
+        </Container>
+      </Reveal>
 
       <ul
         ref={trackRef}
@@ -53,9 +65,18 @@ export default function Testimonials() {
         aria-label='Client testimonials'
         className='mt-10 flex snap-x snap-mandatory gap-6 overflow-x-auto px-5 pb-4 sm:px-8 lg:px-16 scrollbar-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-coral [&::-webkit-scrollbar]:hidden'
       >
-        {TESTIMONIALS.map((testimonial) => (
-          <li
+        {TESTIMONIALS.map((testimonial, index) => (
+          <motion.li
             key={testimonial.name}
+            variants={cardVariants}
+            initial='hidden'
+            whileInView='shown'
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{
+              duration: reduceMotion ? 0.2 : 0.45,
+              delay: reduceMotion ? 0 : index * 0.06,
+              ease: [0.23, 1, 0.32, 1],
+            }}
             className='flex w-[min(100%,420px)] shrink-0 snap-start flex-col rounded-lg border-l-[3px] border-coral bg-white p-6 shadow-[0_2px_12px_rgba(21,21,21,0.06)]'
           >
             <div className='flex items-center gap-4'>
@@ -76,7 +97,7 @@ export default function Testimonials() {
             <blockquote className='mt-5 text-base leading-[1.45] sm:leading-[1.6] lg:leading-[1.75] text-ink'>
               {testimonial.quote}
             </blockquote>
-          </li>
+          </motion.li>
         ))}
       </ul>
 

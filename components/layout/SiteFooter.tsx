@@ -60,7 +60,7 @@ export default function SiteFooter() {
               <nav key={column.title} aria-labelledby={`footer-${column.title}`}>
                 <h2
                   id={`footer-${column.title}`}
-                  className="text-lg font-semibold text-white"
+                  className="font-heading text-lg font-semibold text-white"
                 >
                   {column.title}
                 </h2>
@@ -82,7 +82,7 @@ export default function SiteFooter() {
 
           <div className="mt-12 grid gap-8 rounded-xl bg-white/5 p-6 lg:grid-cols-[1fr_1.05fr_0.62fr] lg:gap-0">
             <div className="lg:pr-8">
-              <h2 className="text-lg font-semibold text-white">Registered Offices</h2>
+              <h2 className="font-heading text-lg font-semibold text-white">Registered Offices</h2>
               <address className="mt-4 space-y-1 not-italic">
                 <p className="font-medium text-coral">
                   {REGISTERED_OFFICES[0].country}
@@ -109,7 +109,7 @@ export default function SiteFooter() {
             </address>
 
             <div className="lg:border-l lg:border-white/20 lg:pl-8">
-              <h2 className="text-lg font-semibold text-white">
+              <h2 className="font-heading text-lg font-semibold text-white">
                 Contact Information
               </h2>
               <ul className="mt-4 space-y-3">

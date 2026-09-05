@@ -15,8 +15,9 @@ Assessment, built as a responsive, production-ready Next.js application.
 | UI        | React 19.2.8                                 |
 | Styling   | Tailwind CSS v4 (via `@tailwindcss/postcss`) |
 | Language  | TypeScript 5                                 |
-| Fonts     | `next/font/google`                           |
+| Fonts     | Nunito + Nunito Sans via `next/font/google`  |
 | Images    | `next/image`                                 |
+| Motion    | Framer Motion (scroll reveals only)          |
 
 No other CSS framework, UI kit, or third-party component library is used — every component in
 `components/` is written from scratch for this project.
@@ -46,7 +47,7 @@ app/
 components/
   layout/        SiteHeader, NavDropdown, MobileMenu, SiteFooter
   sections/      One file per page section
-  ui/            Button, Container, BulletList, icons
+  ui/            Button, Container, BulletList, Reveal, icons
 lib/
   content.ts     All page copy and link data, typed
 public/images/   Design assets, renamed descriptively
@@ -61,7 +62,20 @@ colours were sampled pixel-by-pixel from the provided PNG exports and defined on
 under Tailwind v4's `@theme` block (`--color-plum: #571244`, `--color-coral: #ef4353`, and so on).
 Components use semantic utilities like `bg-plum` rather than arbitrary hex values.
 
-**Font substitution.** **Nunito Sans** is loaded via `next/font/google`.
+**Fonts.** The design pairs two families, both loaded via `next/font/google`: **Nunito** at semibold
+for headings, **Nunito Sans** for body copy. They are exposed as the `font-heading` and `font-sans`
+Tailwind tokens in `app/globals.css`, so a heading only needs `font-heading font-semibold`.
+
+**Scroll animations.** Each section below the fold fades and rises into place once, via the shared
+`components/ui/Reveal.tsx` wrapper (Framer Motion `whileInView` with `once: true`). Only `opacity` and
+a full `transform` string animate, so the work stays on the GPU. The testimonial cards additionally
+stagger at 60ms intervals. Two deliberate exclusions: the hero does not animate — it is above the fold,
+and delaying the largest text paint to animate something already on screen trades real performance for
+no benefit — and `prefers-reduced-motion` drops the translate everywhere, keeping only a short fade
+rather than removing the transition entirely.
+
+**The desktop and mobile frames disagree in three places.** Where they differ, the implementation
+follows each frame at its own breakpoint:
 
 1. _Hero heading._ Desktop reads "Training and Development"; mobile reads "Learning and Development".
    The desktop wording is used at every breakpoint, since it matches the page name and the brief.
@@ -81,8 +95,8 @@ navigable and screen-reader-correct.
 nav dropdown carets, and testimonial carousel arrows. Rendering these as inert decoration would leave
 keyboard users with dead controls, so they are implemented for real: the mobile menu traps focus and
 closes on Escape, dropdowns respond to click and Escape with `aria-expanded`, and the carousel is a
-scroll-snap track that is itself focusable and arrow-key scrollable. These are the only client
-components; everything else is a server component.
+scroll-snap track that is itself focusable and arrow-key scrollable. Client components are limited to
+those three plus the `Reveal` animation wrapper; every section is otherwise a server component.
 
 ## Responsive behaviour
 
@@ -103,7 +117,6 @@ queries anywhere in the codebase.
 ## Known issues
 
 - The live URL above is a placeholder until the Vercel deployment is created.
-- The typeface is a visual match rather than the exact Figma font — see "Font substitution".
 - Nav dropdown submenu items are invented groupings; the Figma frame shows the carets but not the
   expanded menu contents.
 
