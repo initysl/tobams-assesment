@@ -22,14 +22,14 @@ export default function ManagementDevelopmentProgram() {
           <div className="w-full lg:w-1/2">
             <h2
               id="mdp-title"
-              className="text-3xl leading-snug font-medium text-white sm:text-4xl lg:text-[40px]"
+              className="text-[22px] leading-snug font-medium text-white sm:text-3xl lg:text-[40px]"
             >
               {MDP.title}
             </h2>
             {MDP.paragraphs.map((paragraph) => (
               <p
                 key={paragraph}
-                className="mt-5 text-base leading-[1.75] text-white lg:text-lg"
+                className="mt-5 text-base leading-[1.45] sm:leading-[1.6] lg:leading-[1.75] text-white lg:text-lg"
               >
                 {paragraph}
               </p>

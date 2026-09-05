@@ -35,12 +35,12 @@ export default function Testimonials() {
   return (
     <section
       aria-labelledby='testimonials-title'
-      className='bg-canvas py-12 lg:py-16'
+      className='bg-canvas pt-14 pb-12 lg:pt-16 lg:pb-16'
     >
       <Container>
         <h2
           id='testimonials-title'
-          className='text-center text-3xl font-medium text-ink sm:text-4xl lg:text-[40px]'
+          className='text-center text-[22px] font-medium text-ink sm:text-3xl lg:text-[40px]'
         >
           Testimonials
         </h2>
@@ -64,16 +64,16 @@ export default function Testimonials() {
                 alt={`Portrait of ${testimonial.name}`}
                 width={65}
                 height={65}
-                className='size-14 rounded-full object-cover'
+                className='size-10 rounded-full object-cover'
               />
               <div>
                 <p className='font-semibold text-ink'>{testimonial.name}</p>
-                <p className='text-[15px] text-slate-body/70'>
+                <p className='text-sm text-slate-body/70'>
                   {testimonial.role}
                 </p>
               </div>
             </div>
-            <blockquote className='mt-5 text-base leading-[1.75] text-ink lg:text-lg'>
+            <blockquote className='mt-5 text-base leading-[1.45] sm:leading-[1.6] lg:leading-[1.75] text-ink'>
               {testimonial.quote}
             </blockquote>
           </li>

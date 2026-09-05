@@ -13,7 +13,7 @@ export default function BulletList({
       {items.map((item) => (
         <li key={item} className="flex items-start gap-3">
           <BoltIcon className="mt-0.5 size-5.5 shrink-0 text-plum" />
-          <span className="text-base text-slate-body lg:text-lg">{item}</span>
+          <span className="text-[15px] text-slate-body sm:text-base lg:text-lg">{item}</span>
         </li>
       ))}
     </ul>

@@ -9,18 +9,18 @@ export default function TrainingTheConsultant() {
       <Container>
         <h2
           id="consultant-title"
-          className="text-3xl font-medium text-plum sm:text-4xl lg:text-[42px]"
+          className="text-[22px] font-medium text-plum sm:text-3xl lg:text-[42px]"
         >
           {TTC.title}
         </h2>
         <p className="mt-3 text-base font-medium text-plum lg:text-lg">{TTC.subtitle}</p>
-        <p className="mt-5 text-base leading-[1.75] text-ink lg:text-lg">{TTC.body}</p>
+        <p className="mt-5 text-base leading-[1.45] sm:leading-[1.6] lg:leading-[1.75] text-ink lg:text-lg">{TTC.body}</p>
 
         <dl className="mt-8 grid gap-x-14 gap-y-6 rounded-xl bg-plum p-6 sm:grid-cols-2 lg:p-8">
           {TTC.benefits.map((benefit) => (
             <div key={benefit.title}>
               <dt className="font-semibold text-white">{benefit.title}</dt>
-              <dd className="mt-3 text-base leading-[1.75] text-white">
+              <dd className="mt-3 text-base leading-[1.45] sm:leading-[1.6] lg:leading-[1.75] text-white">
                 {benefit.body}
               </dd>
             </div>

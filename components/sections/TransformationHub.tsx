@@ -18,7 +18,7 @@ export default function TransformationHub() {
           >
             {HUB.title}
           </h2>
-          <p className="mt-6 text-base leading-[1.75] text-ink lg:text-lg">{HUB.body}</p>
+          <p className="mt-6 text-base leading-[1.45] sm:leading-[1.6] lg:leading-[1.75] text-ink lg:text-lg">{HUB.body}</p>
 
           <div className="mt-8 flex flex-col gap-6 lg:flex-row lg:items-stretch">
             <div className="w-full lg:w-1/2">
