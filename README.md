@@ -3,7 +3,7 @@
 An implementation of the Tobams Group "Training and Development" page for the Frontend Intern
 Assessment, built as a responsive, production-ready Next.js application.
 
-**Live URL:** _<!-- TODO: paste the Vercel deployment URL here -->_
+**Live URL:** (https://tobams-frontend-assessment-theta.vercel.app/)
 
 **Figma design:** [Frontend Intern Assessment](https://www.figma.com/design/wuqCLkK1feTgB6xxSRRwZu/Frontend-Intern-Assessment?node-id=0-1&p=f&t=qxnAKp4Ael8QtLYz-0)
 
@@ -101,6 +101,8 @@ keyboard users with dead controls, so they are implemented for real: the mobile 
 closes on Escape, dropdowns respond to click and Escape with `aria-expanded`, and the carousel is a
 scroll-snap track that is itself focusable and arrow-key scrollable. Client components are limited to
 those three plus the `Reveal` animation wrapper; every section is otherwise a server component.
+
+**SEO** A small seo was implemented with optimized meta tags, structured data markup, and a clean XML sitemap to improve crawlability.
 
 ## Responsive behaviour
 
