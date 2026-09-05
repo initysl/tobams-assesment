@@ -1,6 +1,6 @@
 # Tobams Group - Frontend Intern Assessment
 
-An implementation of the Tobams Group "Training and Development" page for the Frontend Intern
+An implementation of the Tobams Group "FIGMA design" landing page for the Frontend Intern
 Assessment, built as a responsive, production-ready Next.js application.
 
 **Live URL:** (https://tobams-frontend-assessment-theta.vercel.app/)
