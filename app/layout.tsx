@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   // Lets the OG/Twitter/canonical URLs below stay relative. See lib/site.ts.
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${TITLE} | ${SITE_NAME}`,
+    default: `${TITLE}`,
     template: `%s | ${SITE_NAME}`,
   },
   description: DESCRIPTION,
