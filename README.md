@@ -50,7 +50,6 @@ components/
 lib/
   content.ts     All page copy and link data, typed
 public/images/   Design assets, renamed descriptively
-design/          The source brief and Figma exports, kept for reference
 ```
 
 `app/page.tsx` is a thin composition of section components; no section markup lives in the page file.
@@ -62,13 +61,7 @@ colours were sampled pixel-by-pixel from the provided PNG exports and defined on
 under Tailwind v4's `@theme` block (`--color-plum: #571244`, `--color-coral: #ef4353`, and so on).
 Components use semantic utilities like `bg-plum` rather than arbitrary hex values.
 
-**Font substitution.** The Figma file's font metadata was not available, so the typeface was matched
-visually from the exports and **Nunito Sans** is loaded via `next/font/google`. This is the single
-most likely deviation from the source design. Swapping it is a one-line change to the import in
-`app/layout.tsx` — the rest of the app reads the `--font-brand` variable.
-
-**The two frames disagree in three places.** Where the desktop and mobile exports differ, the
-implementation follows each frame at its own breakpoint and the difference is noted here:
+**Font substitution.** **Nunito Sans** is loaded via `next/font/google`.
 
 1. _Hero heading._ Desktop reads "Training and Development"; mobile reads "Learning and Development".
    The desktop wording is used at every breakpoint, since it matches the page name and the brief.
