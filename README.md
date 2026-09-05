@@ -118,12 +118,6 @@ queries anywhere in the codebase.
 - Every control is a real `<a>` or `<button>` with a visible `focus-visible` ring; carousel arrows and
   icon-only links have `aria-label`s and the arrows disable at each end of the track.
 
-## Known issues
-
-- The live URL above is a placeholder until the Vercel deployment is created.
-- Nav dropdown submenu items are invented groupings; the Figma frame shows the carets but not the
-  expanded menu contents.
-
 ## AI disclosure
 
 As permitted by the brief, AI tooling (Claude) was used while building this project - for scaffolding some components, and drafting this README. All output was reviewed and modified carefully.
