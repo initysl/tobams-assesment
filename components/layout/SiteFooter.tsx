@@ -154,7 +154,8 @@ export default function SiteFooter() {
 
           <div className='mt-10 flex flex-col gap-4 border-t border-white/20 pt-6 lg:flex-row lg:items-center lg:justify-between'>
             <p className='text-base text-white/90'>
-              Copyright &copy; Tobams Group, 2024. All rights reserved.
+              Copyright &copy; Tobams Group, {new Date().getFullYear()}. All
+              rights reserved.
             </p>
             <ul className='flex flex-wrap gap-x-8 gap-y-2'>
               {LEGAL_LINKS.map((link) => (
